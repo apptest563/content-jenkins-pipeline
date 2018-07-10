@@ -8,5 +8,10 @@ pipeline {
         sh 'jar -cvmf MAINFEST.MF rectangle.jar *.class'
       }
     }
+    stage('run') {
+      steps {
+         sh 'java -jar rectangle.java 10 80'
+      }
+    }
   }
 }
